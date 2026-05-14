@@ -7,9 +7,9 @@
         body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; color: #333; }
         h1 { color: #2c3e50; }
         .module { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .secret-link { color: #34495e; text-decoration: none; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 10px; }
-        .secret-link:hover { text-decoration: underline; }
-        .game-container { display: none; margin-top: 20px; width: 100%; height: 600px; border: none; }
+        .secret-link { background: #34495e; color: white; border: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 10px; }
+        .secret-link:hover { background: #2c3e50; }
+        .game-container { display: none; margin-top: 20px; width: 100%; height: 650px; border: 2px solid #ddd; border-radius: 6px; }
     </style>
     <script>
         function toggleGame(id) {
@@ -17,6 +17,8 @@
             if (iframe.style.display === "block") {
                 iframe.style.display = "none";
             } else {
+                var frames = document.getElementsByClassName('game-container');
+                for(var i=0; i<frames.length; i++) { frames[i].style.display = "none"; }
                 iframe.style.display = "block";
             }
         }
@@ -28,25 +30,27 @@
     <p>Select a module pathway to load your interactive practice modules and active recall sheets.</p>
 
     <div class="module">
-        <h3>Module 1: Advanced Geometric Vector Analysis</h3>
+        <h3>Module 1: Advanced Geometric Vector Analysis (Retro Bowl)</h3>
         <p>Practice dynamic momentum vectors, trajectory curves, and spatial tracking.</p>
         <button class="secret-link" onclick="toggleGame('retrobowl')">Launch Module 1 Practice Asset</button>
-        <!-- Embedded clean unblocked game clone mirror -->
+        <!-- Public Unblocked Retro Bowl Mirror Link -->
         <iframe id="retrobowl" class="game-container" src="github.io"></iframe>
     </div>
 
     <div class="module">
-        <h3>Module 2: Rhythmic Spatial Grid Coordinates</h3>
+        <h3>Module 2: Rhythmic Spatial Grid Coordinates (Geometry Dash)</h3>
         <p>Test linear velocity, jump trajectories, and spatial timing limits.</p>
         <button class="secret-link" onclick="toggleGame('geometry')">Launch Module 2 Practice Asset</button>
-        <iframe id="geometry" class="game-container" src="pages.dev"></iframe>
+        <!-- Public Unblocked Geometry Dash Mirror Link -->
+        <iframe id="geometry" class="game-container" src="github.io"></iframe>
     </div>
 
     <div class="module">
-        <h3>Module 3: Logic and Analytical Puzzle Engine</h3>
+        <h3>Module 3: Logic and Analytical Puzzle Engine (Coolmath Games)</h3>
         <p>Access the core archive for dynamic math, logical patterns, and strategy puzzles.</p>
         <button class="secret-link" onclick="toggleGame('coolmath')">Launch Module 3 Practice Asset</button>
-        <iframe id="coolmath" class="game-container" src="coolmathgames.com"></iframe>
+        <!-- Public Unblocked Coolmath / Strategy Hub Mirror Link -->
+        <iframe id="coolmath" class="game-container" src="https://sz-games.github.io"></iframe>
     </div>
 
 </body>
